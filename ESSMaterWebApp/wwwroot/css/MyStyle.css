@@ -278,59 +278,127 @@ a {
 /*----------------Navigation bar-------------------------*/
 /* Navigation Bar Styling */
 .navbar {
-    background: linear-gradient(90deg, #ff9f43, #ff6f61);
+    background: linear-gradient(90deg, #ff9f43, #ff6f61); /* Modern gradient */
     border-bottom: 2px solid #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    z-index: 1000;
     width: 100%;
+    padding: 0.5rem 1.5rem; /* Better padding */
 }
 
-.login-page .navbar,
-.register-page .navbar {
-    background: #fff; /* Override if necessary */
+.navbar-logo {
+    height: 120px; /* Adjusted size for a more compact navbar */
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-
+/* Branding Text */
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: #ffffff;
+    letter-spacing: 1px; /* Subtle letter spacing for style */
+    transition: color 0.3s ease;
 }
 
+    .navbar-brand:hover {
+        color: #ffe8d6; /* Subtle hover effect for brand text */
+    }
+
+/* Navigation Links */
 .navbar-nav .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ffffff;
+    padding: 10px 15px;
+    margin: 0 10px; /* Spacing between links */
     transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
     .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Hover background */
         color: #ffe8d6;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
-/* Button in Navbar */
+    .navbar-nav .nav-link.active {
+        color: #ffe8d6;
+        font-weight: bold;
+    }
+
+/* Navbar Toggler (Hamburger Icon) */
 .navbar-toggler {
     background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .navbar-toggler-icon {
     color: #ff6f61;
-}
-
-/* Active Nav Link */
-.navbar-nav .nav-link.active {
-    color: #ffe8d6;
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* Footer Styling */
 footer {
-    background: #1c1c1c;
-    color: #cccccc;
+    background: #1c1c1c; /* Dark background for footer */
+    color: #ffffff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0; /* More padding for better spacing */
+    font-size: 1rem;
+}
+
+    footer a {
+        color: #ff9f43; /* Contrast color for links in footer */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        footer a:hover {
+            color: #ff6f61; /* Hover effect on footer links */
+            text-decoration: underline;
+        }
+
+    footer p {
+        margin: 0;
+    }
+
+/* Button Styling */
+.navbar .btn {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .navbar .btn:hover {
+        background-color: #ff9f43;
+        transform: scale(1.05);
+    }
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .navbar-logo {
+        height: 40px; /* Smaller logo for mobile */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+        .navbar-nav .nav-link:hover {
+            background-color: transparent; /* Remove hover background on mobile */
+        }
 }
 
 @media (max-width: 576px) {
@@ -398,7 +466,7 @@ footer {
             background: #ff6f61;
             color: #fff;
         }
-/* Volunteer Section Styling */
+/*=========================== Volunteer Section Styling ============================== */
 .volunteer-section {
     padding: 40px 20px;
     text-align: center;
@@ -1227,4 +1295,449 @@ button.btn {
         opacity: 0;
     }
 }
+
+/*=========================== Appointemnet index ===========================*/
+/* Basic styling for the page title */
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the link to create new appointment */
+.create-new-link a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    .create-new-link a:hover {
+        background-color: #0056b3;
+    }
+
+/* Styling for the table */
+.table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.thead-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Styling for action buttons */
+.btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-sm {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+}
+
+/* Button hover states */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/*========================== Appointment create======================*/
+/* General Page Styling */
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Container */
+.appointment-form {
+    background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Orange to yellow gradient */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.control-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White labels for better contrast */
+}
+
+/* Input Fields */
+input.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff; /* White border for inputs */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff; /* White text inside the input */
+}
+
+    input.form-control:focus {
+        border-color: #ffcc00; /* Focus border color matching the gradient */
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Yellow glow on focus */
+    }
+
+/* Validation Error Styling */
+.text-danger {
+    font-size: 0.875rem;
+    color: #e74c3c; /* Red for error messages */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffcc00; /* Yellow for submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #ff7f50; /* Orange on hover */
+    }
+
+/* Go Back Button (Admin Only) */
+.go-back-link a {
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+    .go-back-link a:hover {
+        background-color: #5a6268;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appointment-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+
+/*================================== Donation =====================================*/
+/* Style for the form container */
+.donation-form {
+    background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Orange to yellow gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin-top: 20px;
+}
+
+    /* Input fields and form controls */
+    .donation-form .form-control {
+        background-color: rgba(255, 255, 255, 0.2); /* Transparent white for inputs */
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .donation-form .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: #ffcc00; /* Yellow border when focused */
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Yellow glow */
+            color: #fff;
+        }
+
+    /* Form labels */
+    .donation-form .control-label {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Validation error messages */
+    .donation-form .text-danger {
+        font-size: 0.875rem;
+        color: #ff6f61; /* Soft red for error messages */
+    }
+
+    /* Donation type section styling */
+    .donation-form .form-check-label {
+        color: #fff;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    /* Submit button styling */
+    .donation-form .btn-primary {
+        background-color: #ffcc00; /* Yellow button to match gradient */
+        border: none;
+        color: white;
+        font-size: 1rem;
+        padding: 12px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+        .donation-form .btn-primary:hover {
+            background-color: #ff7f50; /* Orange hover effect */
+            transform: scale(1.05);
+        }
+
+/* Go back link button */
+.go-back-link .btn-secondary {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+    .go-back-link .btn-secondary:hover {
+        background-color: #e05f57;
+        transform: scale(1.05);
+    }
+
+/* Additional styling for the "Create" heading */
+.page-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/*================================ Media Content ================================*/
+/* General Page Styling */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Container */
+.media-content-form {
+    background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Gradient background from orange to yellow */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.control-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White labels */
+}
+
+/* Input Fields */
+input.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff; /* White border */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff; /* White text */
+}
+
+    input.form-control:focus {
+        border-color: #ffcc00; /* Focused border color */
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Glowing effect */
+    }
+
+/* Validation Error Styling */
+.text-danger {
+    font-size: 0.875rem;
+    color: #e74c3c; /* Red for errors */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffcc00; /* Yellow button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #ff7f50; /* Orange on hover */
+    }
+
+/* Go Back Button */
+.go-back-link a {
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+    .go-back-link a:hover {
+        background-color: #5a6268;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .media-content-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+/*========================== media*/
+.media-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.media-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .media-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.media-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.media-description {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.media-type,
+.media-url {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.media-actions .btn {
+    margin: 5px;
+}
+
+.media-actions .btn-sm {
+    font-size: 0.875rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .media-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 

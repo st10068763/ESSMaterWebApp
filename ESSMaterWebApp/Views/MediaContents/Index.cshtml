@@ -1,53 +1,36 @@
 ﻿@model IEnumerable<ESSMaterWebApp.Models.MediaContent>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Media Content";
 }
 
-<h1>Index</h1>
+<h1 class="page-title">Media Content</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="create-new-link">
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MediaTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Url)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MediaTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Url)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MediaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MediaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MediaId">Delete</a>
-            </td>
-        </tr>
+
+@if (!Model.Any())
+{
+    <p class="text-center">No media content available. Click <a asp-action="Create">here</a> to add new content.</p>
 }
-    </tbody>
-</table>
+else
+{
+    <div class="media-content-container">
+        @foreach (var item in Model)
+        {
+            <div class="media-card">
+                <h3 class="media-title">@item.MediaTitle</h3>
+                <p class="media-description">@item.Description</p>
+                <p class="media-type"><strong>Type:</strong> @item.Type</p>
+                <p class="media-url"><strong>URL:</strong> <a href="@item.Url" target="_blank">@item.Url</a></p>
+
+                <div class="media-actions">
+                    <a class="btn btn-secondary btn-sm" asp-action="Edit" asp-route-id="@item.MediaId" title="Edit Media Content">Edit</a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.MediaId" title="View Media Details">Details</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.MediaId" title="Delete Media Content">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+}

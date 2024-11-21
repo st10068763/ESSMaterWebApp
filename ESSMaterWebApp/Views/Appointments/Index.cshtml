@@ -1,95 +1,74 @@
 ﻿@model IEnumerable<ESSMaterWebApp.Models.Appointment>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Appointments";
 }
 
-<h1>Index</h1>
+<h1 class="page-title">Appointments</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="create-new-link">
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ServiceType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmailAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Province)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Suburb)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubmissionDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AppointmentDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ServiceType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Province)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Suburb)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubmissionDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AppointmentDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AppointmentId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AppointmentId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AppointmentId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<!-- Container for repeating items -->
+<div class="appointment-list">
+    @foreach (var item in Model)
+    {
+        <div class="appointment-card card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title">@item.ServiceType</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>First Name:</strong> @item.FirstName</p>
+                <p><strong>Surname:</strong> @item.Surname</p>
+                <p><strong>Email Address:</strong> @item.EmailAddress</p>
+                <p><strong>Phone Number:</strong> @item.PhoneNumber</p>
+                <p><strong>Country:</strong> @item.Country</p>
+                <p><strong>Province:</strong> @item.Province</p>
+                <p><strong>City:</strong> @item.City</p>
+                <p><strong>Suburb:</strong> @item.Suburb</p>
+                <p><strong>Submission Date:</strong> @item.SubmissionDate</p>
+                <p><strong>Appointment Date:</strong> @item.AppointmentDate</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-secondary btn-sm" asp-action="Edit" asp-route-id="@item.AppointmentId">Edit</a>
+                <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.AppointmentId">Details</a>
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.AppointmentId">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Add some styling to the cards -->
+<style>
+    .appointment-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .card-header {
+        background-color: #5c6bc0;
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+</style>
