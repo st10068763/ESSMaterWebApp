@@ -43,5 +43,14 @@ namespace ESSMaterWebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpPost]
+        public IActionResult SubmitContactForm(string name, string email, string message)
+        {
+            // Handle the submitted data (e.g., send an email or save to the database)
+            TempData["SuccessMessage"] = "Thank you for contacting us! We will get back to you soon.";
+            return RedirectToAction("ContactUs");
+        }
+
     }
 }

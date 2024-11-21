@@ -1,7 +1,67 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Gallery";
 }
 
-<h1>View</h1>
+<section id="gallery" class="gallery-section">
+    <h1>Our Gallery</h1>
+    <p>Explore moments from our events, projects, and initiatives that highlight our mission and impact.</p>
 
+    <div class="gallery-grid">
+       
+        <div class="gallery-item">
+            <img src="/Images/donate.jpeg" alt="Gallery Image 2" class="gallery-img" onclick="openLightbox();currentSlide(2)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/donation.jpeg" alt="Gallery Image 3" class="gallery-img" onclick="openLightbox();currentSlide(3)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/Mentoring.jpeg" alt="Gallery Image 4" class="gallery-img" onclick="openLightbox();currentSlide(4)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/User story (2).jpeg" alt="Gallery Image 5" class="gallery-img" onclick="openLightbox();currentSlide(5)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/User story.jpeg" alt="Gallery Image 6" class="gallery-img" onclick="openLightbox();currentSlide(6)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/donate.jpeg" alt="Gallery Image 7" class="gallery-img" onclick="openLightbox();currentSlide(7)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/Founder.jpeg" alt="Gallery Image 8" class="gallery-img" onclick="openLightbox();currentSlide(8)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/User story (2).jpeg" alt="Gallery Image 9" class="gallery-img" onclick="openLightbox();currentSlide(9)" />
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/donation.jpeg" alt="Gallery Image 10" class="gallery-img" onclick="openLightbox();currentSlide(10)" />
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-slide" id="lightbox-slide">
+        </div>
+    </div>
+</section>
+
+<script>
+    // Open the lightbox
+    function openLightbox() {
+        document.getElementById("lightbox-modal").style.display = "flex";
+    }
+
+    // Close the lightbox
+    function closeLightbox() {
+        document.getElementById("lightbox-modal").style.display = "none";
+    }
+
+    // Change slide in the lightbox
+    function currentSlide(n) {
+        let slides = document.getElementsByClassName("gallery-img");
+        let lightboxSlide = document.getElementById("lightbox-slide");
+        lightboxSlide.src = slides[n - 1].src;
+    }
+
+ </script>
