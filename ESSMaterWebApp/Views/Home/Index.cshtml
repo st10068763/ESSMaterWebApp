@@ -2,7 +2,77 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="landing-page">
+
+        <section id="founder" class="section founder-section">
+        <h2 class="founder-title">Our Founder</h2>
+        <div class="founder-container">
+            <img src="./Images/Founder.jpeg" alt="Founder" class="founder-image" />
+            <p class="founder-description"> Ann Ligmann's journey is filled with personal victory, ironically, but victory is not achieved without battle. Distressed females simply give up everything in the battle for social justice and become a burden on the state.</p>
+            </div>
+        </section>
+
+    <header class="hero-section">
+        <h1>Welcome to Our NGO</h1>
+        <p>Making a difference, one step at a time.</p>
+        <a href="#volunteer" class="btn">Join Us as a Volunteer</a>
+    </header>
+
+    <section id="volunteer" class="section volunteer-section">
+        <h2>Become a Volunteer</h2>
+        <p>Join our team and help us create positive change in the world.</p>
+        <a href="/volunteer" class="btn">Sign Up to Volunteer</a>
+    </section>
+
+    <section id="donation" class="section donation-section">
+        <h2>Support Our Cause</h2>
+        <p>Your generosity can change lives. Make a donation today.</p>
+        <a href="/donate" class="btn">Donate Now</a>
+    </section>
+   
+    <section id="projects" class="section projects-section">
+        <h2>Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Built a community library in rural areas to improve literacy.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Provided clean water access to over 1,000 families.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>Organized health camps benefiting underserved populations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials-section">
+        <h2>What People Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"This NGO changed my life! I'm forever grateful."</p>
+                <span>- Jane Doe</span>
+            </div>
+            <div class="testimonial">
+                <p>"Their efforts have brought hope to our community."</p>
+                <span>- Local Leader</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Our NGO. All rights reserved.</p>
+    </footer>
 </div>

@@ -1,7 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = "ContactUs";
+﻿@{
+    ViewData["Title"] = "Contact Us";
 }
 
-<h1>ContactUs</h1>
+<section id="contact-us" class="contact-us-section">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We'd love to hear from you!</p>
 
+    <form class="contact-form" action="/Home/SubmitContactForm" method="post">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
