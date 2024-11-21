@@ -10,6 +10,25 @@
         <a href="#volunteer" class="btn">Join Us as a Volunteer</a>
     </header>
 
+    @*-------------------------slide show here------------------------ *@
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide fade">
+            <img src="./Images/picture.jpg" alt="Slide 1" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide fade">
+            <img src="./Images/Mentoring.jpeg" alt="Slide 2" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide fade">
+            <img src="./Images/User story (2).jpeg" alt="Slide 3" />
+        </div>
+    </div>
+
     <section id="founder" class="section founder-section">
         <div class="founder-container">
             <div class="founder-image-container">
@@ -79,45 +98,107 @@
         </div>
     </section>
 
-
-
     <section id="donation" class="section donation-section">
         <h2>Support Our Cause</h2>
         <p>Your generosity can change lives. Make a donation today.</p>
-        <a href="/donate" class="btn">Donate Now</a>
+
+        <div class="donation-cards-container">
+            <!-- Donation Card 1 -->
+            <div class="donation-card">
+                <img src="./Images/User story.jpeg" alt="One-Time Donation" />
+                <div class="donation-card-content">
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution to help us fund critical programs and initiatives.</p>
+                    <button class="btn" onclick="window.location.href='/donate';">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Donation Card 2 -->
+            <div class="donation-card">
+                <img src="./Images/Mentoring.jpeg" alt="Monthly Giving" />
+                <div class="donation-card-content">
+                    <h3>Monthly Giving</h3>
+                    <p>Provide ongoing support by committing to a monthly donation for sustainable impact.</p>
+                    <button class="btn" onclick="window.location.href='/donate';">Donate Monthly</button>
+                </div>
+            </div>
+
+            <!-- Donation Card 3 -->
+            <div class="donation-card">
+                <img src="./Images/donation.jpeg" alt="Legacy Giving" />
+                <div class="donation-card-content">
+                    <h3>Legacy Giving</h3>
+                    <p>Leave a lasting legacy by including our cause in your estate planning.</p>
+                    <button class="btn" onclick="window.location.href='/donate';">Learn More</button>
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <section id="projects" class="section projects-section">
         <h2>Recent Projects</h2>
         <div class="projects-grid">
+            <!-- Project 1 -->
             <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Built a community library in rural areas to improve literacy.</p>
+                <img src="./Images/donate.jpeg" alt="Project 1" />
+                <div class="project-card-content">
+                    <h3>Community Library</h3>
+                    <p>Built a community library in rural areas to improve literacy.</p>
+                    <button class="btn" onclick="window.location.href='/projects/project1';">Learn More</button>
+                </div>
             </div>
+
+            <!-- Project 2 -->
             <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Provided clean water access to over 1,000 families.</p>
+                <img src="./Images/Mentoring.jpeg" alt="Project 2" />
+                <div class="project-card-content">
+                    <h3>Clean Water Access</h3>
+                    <p>Provided clean water access to over 1,000 families.</p>
+                    <button class="btn" onclick="window.location.href='/projects/project2';">Learn More</button>
+                </div>
             </div>
+
+            <!-- Project 3 -->
             <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Organized health camps benefiting underserved populations.</p>
+                <img src="./Images/User story (2).jpeg" alt="Project 3" />
+                <div class="project-card-content">
+                    <h3>Health Camps</h3>
+                    <p>Organized health camps benefiting underserved populations.</p>
+                    <button class="btn" onclick="window.location.href='/projects/project3';">Learn More</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="section testimonials-section">
-        <h2>What People Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial">
+
+   <section id="testimonials" class="section testimonials-section">
+    <h2>What People Say</h2>
+    <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+            <div class="testimonial-img-container">
+                <img src="./Images/picture.jpg" alt="Jane Doe" class="testimonial-img" />
+            </div>
+            <div class="testimonial-content">
                 <p>"This NGO changed my life! I'm forever grateful."</p>
                 <span>- Jane Doe</span>
             </div>
-            <div class="testimonial">
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+            <div class="testimonial-img-container">
+                <img src="./Images/picture.jpg" alt="Local Leader" class="testimonial-img" />
+            </div>
+            <div class="testimonial-content">
                 <p>"Their efforts have brought hope to our community."</p>
                 <span>- Local Leader</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="contact" class="section contact-section">
         <h2>Contact Us</h2>
@@ -132,4 +213,24 @@
     <footer class="footer">
         <p>&copy; 2024 Our NGO. All rights reserved.</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Hide all slides
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 } // Reset to the first slide if at the end
+            slides[slideIndex - 1].style.display = "block"; // Show the current slide
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            showSlides(); // Wait until the document is fully loaded to start the slideshow
+        });
+    </script>
+
 </div>

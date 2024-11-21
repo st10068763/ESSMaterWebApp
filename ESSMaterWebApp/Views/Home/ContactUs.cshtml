@@ -2,10 +2,12 @@
     ViewData["Title"] = "Contact Us";
 }
 
+
 <section id="contact-us" class="contact-us-section">
     <h1>Contact Us</h1>
     <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We'd love to hear from you!</p>
 
+    <!-- Contact Form -->
     <form class="contact-form" action="/Home/SubmitContactForm" method="post">
         <div class="form-group">
             <label for="name">Your Name</label>
@@ -18,10 +20,74 @@
         </div>
 
         <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+                <option value="inquiry">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="partnership">Partnership</option>
+            </select>
+        </div>
+
+        <div class="form-group">
             <label for="message">Your Message</label>
             <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
         </div>
 
+        <div class="form-group">
+            <label for="phone">Your Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+        </div>
+
         <button type="submit" class="btn">Send Message</button>
     </form>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <h3>Our Contact Details</h3>
+        <p>If you prefer, you can also reach us through the following channels:</p>
+        <ul>
+            <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+            <li><strong>Email:</strong> contact@ourorganization.com</li>
+            <li><strong>Address:</strong> 123 Nonprofit St., City, Country</li>
+        </ul>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <h3>Visit Us</h3>
+        <p>Find our office location on the map below:</p>
+        <div id="map"></div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <p>Stay connected with us on social media:</p>
+        <ul>
+            <li><a href="https://facebook.com/ourorganization" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/ourorganization" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com/ourorganization" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com/company/ourorganization" target="_blank">LinkedIn</a></li>
+        </ul>
+    </div>
 </section>
+<!-- Google Maps Initialization Script -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX3OwYKxsjNTjdlr6qg4FsX8UMj1rgEnw=initMap" async defer></script>
+
+<script>
+    // Initialize the map
+    function initMap() {
+        var location = { -33.918861, 18.423300 }; // Example: New York City
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: "Our Organization's Location"
+        });
+    }
+</script>

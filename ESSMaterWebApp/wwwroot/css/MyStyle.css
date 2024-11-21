@@ -506,6 +506,284 @@ footer {
     }
 }
 
+
+/*--------------------------- Donation section -------------------------*/
+/* Donation Section Styling */
+.donation-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #333333; /* Mid-dark tone */
+    color: #eaeaea;
+}
+
+    .donation-section h2 {
+        font-size: 2rem;
+        color: #ff9f43;
+        margin-bottom: 10px;
+    }
+
+    .donation-section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #cccccc;
+    }
+
+/* Donation Cards Container */
+.donation-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Donation Card Styling */
+.donation-card {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    background: #444444; /* Slightly lighter than the background */
+    border: 1px solid #555555;
+    color: #eaeaea;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .donation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Donation Card Image */
+    .donation-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover; /* Maintain aspect ratio and crop excess */
+        border-radius: 8px 8px 0 0; /* Rounded corners for top only */
+    }
+
+/* Donation Card Content */
+.donation-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+    .donation-card-content h3 {
+        font-size: 1.5rem;
+        color: #ff9f43; /* Accent heading */
+        margin: 0;
+    }
+
+    .donation-card-content p {
+        font-size: 1rem;
+        margin: 0;
+        color: #cccccc;
+    }
+
+    .donation-card-content .btn {
+        background: #ff6f61;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+        .donation-card-content .btn:hover {
+            background: #ff9f43;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-card {
+        flex: 1 1 100%; /* Allow cards to take full width on smaller screens */
+    }
+}
+
+/*================================= Project section==========================*/
+/* Projects Section Styling */
+.projects-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #333333; /* Mid-dark tone */
+    color: #eaeaea;
+}
+
+    .projects-section h2 {
+        font-size: 2rem;
+        color: #ff9f43;
+        margin-bottom: 10px;
+    }
+
+/* Projects Grid Container */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Project Card Styling */
+.project-card {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    background: #444444; /* Slightly lighter than the background */
+    border: 1px solid #555555;
+    color: #eaeaea;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Project Card Image */
+    .project-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover; /* Maintain aspect ratio and crop excess */
+        border-radius: 8px 8px 0 0; /* Rounded corners for top only */
+    }
+
+/* Project Card Content */
+.project-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+    .project-card-content h3 {
+        font-size: 1.5rem;
+        color: #ff9f43; /* Accent heading */
+        margin: 0;
+    }
+
+    .project-card-content p {
+        font-size: 1rem;
+        margin: 0;
+        color: #cccccc;
+    }
+
+    .project-card-content .btn {
+        background: #ff6f61;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+        .project-card-content .btn:hover {
+            background: #ff9f43;
+        }
+
+
+/*=========================== Testimonial section =======================*/
+/* Testimonials Section Styling */
+.testimonials-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #444444; /* Dark background for differentiation */
+    color: #eaeaea;
+}
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+        color: #ff9f43;
+        margin-bottom: 30px;
+    }
+
+/* Testimonials Grid Container */
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Testimonial Card Styling */
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #555555; /* Lighter background for cards */
+    color: #eaeaea;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    flex: 1 1 300px; /* Make cards flexible */
+}
+
+    .testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+/* Testimonial Image Styling */
+.testimonial-img-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px;
+}
+
+.testimonial-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits properly */
+}
+
+/* Testimonial Content */
+.testimonial-content p {
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+    color: #cccccc;
+}
+
+.testimonial-content span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff9f43; /* Accent color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial {
+        flex: 1 1 100%; /* Stack the cards on smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%; /* Allow cards to take full width on smaller screens */
+    }
+}
+
+
  .founder-content {
     display: flex;
     justify-content: center;
@@ -670,19 +948,17 @@ footer {
         }
 
 /*=========================== Contact page =====================*/
+/* Contact Section Styling */
 .contact-us-section {
     padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    color: #333;
 }
 
     .contact-us-section h1 {
         font-size: 2.5rem;
-        color: #333;
+        color: #ff9f43;
         margin-bottom: 20px;
     }
 
@@ -692,10 +968,13 @@ footer {
         margin-bottom: 30px;
     }
 
+/* Contact Form Styling */
 .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .form-group {
@@ -712,6 +991,7 @@ footer {
     }
 
     .form-group input,
+    .form-group select,
     .form-group textarea {
         padding: 10px;
         font-size: 1rem;
@@ -721,16 +1001,17 @@ footer {
     }
 
         .form-group input:focus,
+        .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #007bff;
             box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
         }
 
-.contact-form .btn {
+button.btn {
     padding: 12px 20px;
     font-size: 1rem;
-    background-color: #007bff;
+    background-color: #ff6f61;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -738,20 +1019,84 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-    .contact-form .btn:hover {
-        background-color: #0056b3;
+    button.btn:hover {
+        background-color: #ff9f43;
     }
+
+/* Contact Details Styling */
+.contact-details {
+    margin-top: 40px;
+}
+
+    .contact-details h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-details ul {
+        list-style-type: none;
+        padding: 0;
+        color: #666;
+    }
+
+        .contact-details ul li {
+            margin-bottom: 10px;
+        }
+
+/* Map Styling */
+.map-section {
+    margin-top: 40px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 40px;
+}
+
+    .social-media h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .social-media ul {
+        list-style-type: none;
+        padding: 0;
+        color: #007bff;
+    }
+
+        .social-media ul li {
+            margin-bottom: 10px;
+        }
+
+            .social-media ul li a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .social-media ul li a:hover {
+                    text-decoration: underline;
+                }
+
 /*============================ Gallery ===========================*/
+/* Gallery Section Styling */
 .gallery-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
+    color: #333;
 }
 
     .gallery-section h1 {
         font-size: 2.5rem;
-        color: #333;
         margin-bottom: 20px;
+        color: #ff9f43;
     }
 
     .gallery-section p {
@@ -760,24 +1105,126 @@ footer {
         margin-bottom: 30px;
     }
 
+/* Gallery Grid Layout */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Gallery Item Styling */
 .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+    /* Hover Effect on Image */
+    .gallery-img:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        opacity: 0.8; /* Slight darkening */
+    }
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+    .lightbox-modal .close {
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+}
+
+.lightbox-slide {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-    .gallery-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-section h1 {
+        font-size: 2rem;
     }
+
+    .gallery-item {
+        margin: 0 auto;
+    }
+}
+
+
+/*=========================== Slide show ===========================*/
+/* Slideshow Styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Set a height for the slideshow */
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflowing images */
+}
+
+.slide {
+    display: none; /* Hide slides by default */
+}
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Make images cover the container */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+
+/* Fade animation for transitions */
+.fade {
+    animation: fade 5s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
