@@ -1479,7 +1479,6 @@ input[type="submit"] {
     }
 }
 
-
 /*================================== Donation =====================================*/
 /* Style for the form container */
 .donation-form {
@@ -1759,4 +1758,107 @@ input[type="submit"] {
     height: 40px;
     margin-right: 10px;
     border-radius: 50%; /* Optional: Make the GIF circular */
+}
+
+/*============================== Employee =======================*/
+/* Form Container */
+.employee-form {
+    background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Gradient from orange to yellow */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.control-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White labels */
+}
+
+/* Input Fields */
+input.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff; /* White border */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff; /* White text */
+}
+
+    input.form-control:focus {
+        border-color: #ffcc00; /* Yellow when focused */
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Glowing effect */
+    }
+
+/* Validation Error Styling */
+.text-danger {
+    font-size: 0.875rem;
+    color: #ff6f61; /* Soft red for errors */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffcc00; /* Yellow button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #ff7f50; /* Orange on hover */
+        transform: scale(1.05);
+    }
+
+/* Go Back Button */
+.go-back-link .btn-secondary {
+    font-size: 1rem;
+    background-color: #ff6f61; /* Soft red */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+    .go-back-link .btn-secondary:hover {
+        background-color: #e05f57; /* Darker red on hover */
+        transform: scale(1.05);
+    }
+
+/* Page Title */
+.page-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .employee-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }

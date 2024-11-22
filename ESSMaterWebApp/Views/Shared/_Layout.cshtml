@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="~/ESSMaterWebApp.styles.css" asp-append-version="true" />
     @*//--------------------My css file----------------------*@
     <link rel="stylesheet" href="~/css/MyStyle.css" />
-   @* ------------------------- Bot script -----------------------------  *@
+    @RenderSection("Styles", required: false)
     
 </head>
 <body>
-
+    @* ------------------------- Bot script -----------------------------  *@
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/11/21/23/20241121231813-7V4BRNW4.js"></script>
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <!-- Logo added here -->
+                <!-- Logo -->
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="@Url.Content("~/Images/logoPng.png")" alt="Meta Familia Logo" class="navbar-logo" />
                 </a>
