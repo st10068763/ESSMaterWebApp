@@ -326,26 +326,26 @@ a {
 
 .dropdown-item {
     font-size: 0.9rem;
-    color: #ff7f50;
+    color: #1a1817;
     padding: 10px 15px;
     transition: all 0.3s ease;
 }
 
     .dropdown-item:hover {
-        background-color: #ff7f50; /* Orange hover effect */
+        background-color: #782c10; /* Orange hover effect */
         color: white;
     }
 
-    .navbar-nav .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Hover background */
-        color: #ffe8d6;
-        text-decoration: none;
-    }
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover background */
+    color: #1a1817;
+    text-decoration: none;
+}
 
-    .navbar-nav .nav-link.active {
-        color: #ffe8d6;
-        font-weight: bold;
-    }
+.navbar-nav .nav-link.active {
+    color: #1a1817;
+    font-weight: bold;
+}
 
 /* Navbar Toggler (Hamburger Icon) */
 .navbar-toggler {
@@ -1918,7 +1918,7 @@ input[type="submit"] {
 .about-page-section {
     font-family: Arial, sans-serif;
     padding: 40px 20px;
-    background-color: #f9f9f9;
+    background-color: #545151;
 }
 
 .container {
@@ -1944,7 +1944,7 @@ input[type="submit"] {
     gap: 20px;
 }
 
-.founder-image {
+.Aboutfounder-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -1984,7 +1984,7 @@ input[type="submit"] {
         text-align: center;
     }
 
-    .founder-image {
+    .Aboutfounder-image {
         margin-bottom: 20px;
     }
 }
