@@ -359,30 +359,61 @@ a {
     font-size: 1.5rem;
 }
 
-/* Footer Styling */
-footer {
-    background: #1c1c1c; /* Dark background for footer */
+/*===================== Footer Styling =========================*/
+.footer {
+    background-color: #343a40;
     color: #ffffff;
+    font-size: 0.9rem;
+    padding: 20px 0;
     text-align: center;
-    padding: 30px 0; /* More padding for better spacing */
-    font-size: 1rem;
 }
 
-    footer a {
-        color: #ff9f43; /* Contrast color for links in footer */
-        text-decoration: none;
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Make the main content grow to fill available space */
+main {
+    flex: 1;
+}
+
+    .footer h5 {
+        font-size: 1.25rem;
         font-weight: bold;
     }
 
-        footer a:hover {
-            color: #ff6f61; /* Hover effect on footer links */
-            text-decoration: underline;
-        }
-
-    footer p {
-        margin: 0;
+    .footer a {
+        color: #ffcc00; /* Yellow links */
+        transition: color 0.3s ease;
     }
 
+        .footer a:hover {
+            color: #ff7f50; /* Orange hover effect */
+            text-decoration: none;
+        }
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+
+.footer .social-icons lord-icon {
+    cursor: pointer;
+}
+
+.footer .social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
 /* Button Styling */
 .navbar .btn {
     background-color: #ff6f61;
