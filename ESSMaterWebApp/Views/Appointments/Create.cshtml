@@ -1,7 +1,7 @@
 ﻿@model ESSMaterWebApp.Models.Appointment
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Appointment";
 }
 
 <h1 class="page-title">Create Appointment</h1>
@@ -15,9 +15,11 @@
             <div class="form-group">
                 <label asp-for="ServiceType" class="control-label">Service Type</label>
                 <select asp-for="ServiceType" class="form-control">
-                    <option value="Option1">Mentoring</option>
-                    <option value="Option2">Coaching</option>
-                    <option value="Option3">Advisory service</option>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Mentoring">Mentoring</option>
+                    <option value="Coaching">Coaching</option>
+                    <option value="Advisory">Advisory Service</option>
+                    <option value="Consultation">Consultation</option>
                 </select>
                 <span asp-validation-for="ServiceType" class="text-danger"></span>
             </div>
@@ -50,36 +52,41 @@
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
 
-            <!-- Appointment Type (Online or Physical) -->
+            <!-- Country -->
             <div class="form-group">
-                <label class="control-label">Appointment Type</label>
-                <div class="form-check">
-                    <input type="radio" class="form-check-input" id="onlineAppointment" name="AppointmentType" value="Online" />
-                    <label class="form-check-label" for="onlineAppointment">Online</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" class="form-check-input" id="physicalAppointment" name="AppointmentType" value="Physical" />
-                    <label class="form-check-label" for="physicalAppointment">Physical</label>
-                </div>
+                <label asp-for="Country" class="control-label">Country</label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
             </div>
 
-            <!-- Date and Time Selection for Online Appointment -->
-            <div id="onlineAppointmentDetails" style="display: none;">
-                <div class="form-group">
-                    <label for="AppointmentDate">Select Available Time for Online Appointment</label>
-                    <input type="datetime-local" asp-for="AppointmentDate" class="form-control" />
-                    <span asp-validation-for="AppointmentDate" class="text-danger"></span>
-                </div>
+            <!-- Province -->
+            <div class="form-group">
+                <label asp-for="Province" class="control-label">Province</label>
+                <input asp-for="Province" class="form-control" />
+                <span asp-validation-for="Province" class="text-danger"></span>
             </div>
 
-            <!-- Address for Physical Appointment -->
-            <div id="physicalAppointmentDetails" style="display: none;">
-                <div class="form-group">
-                    <label class="control-label">Appointment Address</label>
-                    <input type="text" class="form-control" value="6 Maud Sumner Close., Stellenbosch, South Africa" disabled />
-                </div>
+            <!-- City -->
+            <div class="form-group">
+                <label asp-for="City" class="control-label">City</label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
             </div>
-            
+
+            <!-- Suburb -->
+            <div class="form-group">
+                <label asp-for="Suburb" class="control-label">Suburb</label>
+                <input asp-for="Suburb" class="form-control" />
+                <span asp-validation-for="Suburb" class="text-danger"></span>
+            </div>
+
+            <!-- Appointment Date -->
+            <div class="form-group">
+                <label asp-for="AppointmentDate" class="control-label">Appointment Date</label>
+                <input asp-for="AppointmentDate" type="datetime-local" class="form-control" />
+                <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+            </div>
+
             <!-- Submit Button -->
             <div class="form-group">
                 <input type="submit" value="Create Appointment" class="btn btn-primary" />
@@ -88,7 +95,6 @@
     </div>
 </div>
 
-@*--------- Display only for  -+- Admin -+- *@
 @if (User.IsInRole("Admin"))
 {
     <div class="go-back-link">
@@ -96,23 +102,76 @@
     </div>
 }
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+@section Styles {
+    <style>
+        /* General Page Styling */
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    <script>
-        // Show appropriate fields based on the appointment type selected
-        document.querySelectorAll('input[name="AppointmentType"]').forEach((radio) => {
-            radio.addEventListener('change', function () {
-                if (this.value === 'Online') {
-                    document.getElementById('onlineAppointmentDetails').style.display = 'block';
-                    document.getElementById('physicalAppointmentDetails').style.display = 'none';
-                } else if (this.value === 'Physical') {
-                    document.getElementById('physicalAppointmentDetails').style.display = 'block';
-                    document.getElementById('onlineAppointmentDetails').style.display = 'none';
+        /* Form Container */
+        .appointment-form {
+            background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Orange to Yellow Gradient */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+            /* Input Fields */
+            .appointment-form .form-control {
+                background-color: rgba(255, 255, 255, 0.2);
+                border: 1px solid #fff;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+                .appointment-form .form-control:focus {
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-color: #ffcc00;
+                    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
                 }
-            });
-        });
-    </script>
+
+            /* Form Labels */
+            .appointment-form label {
+                font-size: 1rem;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            /* Submit Button */
+            .appointment-form .btn-primary {
+                background-color: #ffcc00;
+                border: none;
+                color: #fff;
+                padding: 12px 20px;
+                font-size: 1.1rem;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
+
+                .appointment-form .btn-primary:hover {
+                    background-color: #ff7f50;
+                    transform: scale(1.05);
+                }
+
+        /* Back Link Button */
+        .go-back-link .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .go-back-link .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+    </style>
 }
