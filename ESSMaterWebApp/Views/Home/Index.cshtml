@@ -5,7 +5,7 @@
 <div class="landing-page">
 
     <header class="hero-section">
-        <h1>Welcome to Matafamilia</h1>
+        <h1>Welcome to Materfamilia</h1>
         <p>Making a difference, one step at a time.</p>
         <a href="#volunteer" class="btn">Join Us as a Volunteer</a>
     </header>
@@ -15,7 +15,14 @@
     <div class="slideshow-container">
         <!-- Slide 1 -->
         <div class="slide fade">
-            <img src="./Images/picture.jpg" alt="Slide 1" />
+            <img src="./Images/donate.jpeg" alt="Slide 1" />
+        </div>
+        <div class="slide fade">
+            <img src="./Images/donation.jpeg" alt="Slide 1" />
+        </div>
+
+         <div class="slide fade">
+            <img src="./Images/Founder.jpeg" alt="Slide 1" />
         </div>
 
         <!-- Slide 2 -->
@@ -28,12 +35,12 @@
             <img src="./Images/User story (2).jpeg" alt="Slide 3" />
         </div>
     </div>
-
+    <!---------------------- Founder ------------------------------->
     <section id="founder" class="section founder-section">
         <div class="founder-container">
-            <div class="founder-image-container">
-                <img src="./Images/Founder.jpeg" alt="Founder" class="founder-image" />
-            </div>
+            <!-- <div class="founder-image-container">
+                <img src="~/Images/Founder.jpeg" alt="Founder" class="founder-image" />
+            </div>   -->
             <div class="founder-text">
                 <h2 class="founder-title">OUR FOUNDER</h2>
                 <p class="founder-description">
@@ -72,9 +79,10 @@
                 <div class="volunteer-card-content">
                     <h3>Volunteer Name</h3>
                     <p>Passionate about creating a better world through meaningful actions.</p>
-                    <button class="btn">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
+
 
             <!-- Volunteer Card 2 -->
             <div class="volunteer-card">
@@ -82,7 +90,7 @@
                 <div class="volunteer-card-content">
                     <h3>Volunteer Name</h3>
                     <p>Committed to making positive changes in the community.</p>
-                    <button class="btn">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
 
@@ -92,7 +100,7 @@
                 <div class="volunteer-card-content">
                     <h3>Volunteer Name</h3>
                     <p>Dedicated to helping those in need with compassion and care.</p>
-                    <button class="btn">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
         </div>
@@ -109,7 +117,7 @@
                 <div class="donation-card-content">
                     <h3>One-Time Donation</h3>
                     <p>Make a single contribution to help us fund critical programs and initiatives.</p>
-                    <button class="btn" onclick="window.location.href='/donate';">Donate Now</button>
+                    <button class="btn" onclick="window.location.href='/DonationInterests/Create';">Donate Now</button>
                 </div>
             </div>
 
@@ -119,7 +127,7 @@
                 <div class="donation-card-content">
                     <h3>Monthly Giving</h3>
                     <p>Provide ongoing support by committing to a monthly donation for sustainable impact.</p>
-                    <button class="btn" onclick="window.location.href='/donate';">Donate Monthly</button>
+                    <button class="btn" onclick="window.location.href='/DonationInterests/Create';">Donate Monthly</button>
                 </div>
             </div>
 
@@ -129,7 +137,7 @@
                 <div class="donation-card-content">
                     <h3>Legacy Giving</h3>
                     <p>Leave a lasting legacy by including our cause in your estate planning.</p>
-                    <button class="btn" onclick="window.location.href='/donate';">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/DonationInterests/Create';">Learn More</button>
                 </div>
             </div>
         </div>
@@ -145,7 +153,7 @@
                 <div class="project-card-content">
                     <h3>Community Library</h3>
                     <p>Built a community library in rural areas to improve literacy.</p>
-                    <button class="btn" onclick="window.location.href='/projects/project1';">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
 
@@ -155,7 +163,7 @@
                 <div class="project-card-content">
                     <h3>Clean Water Access</h3>
                     <p>Provided clean water access to over 1,000 families.</p>
-                    <button class="btn" onclick="window.location.href='/projects/project2';">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
 
@@ -165,7 +173,7 @@
                 <div class="project-card-content">
                     <h3>Health Camps</h3>
                     <p>Organized health camps benefiting underserved populations.</p>
-                    <button class="btn" onclick="window.location.href='/projects/project3';">Learn More</button>
+                    <button class="btn" onclick="window.location.href='/Home/CommingSoon'">Learn More</button>
                 </div>
             </div>
         </div>
@@ -210,10 +218,6 @@
         </form>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Our NGO. All rights reserved.</p>
-    </footer>
-
     <script>
         let slideIndex = 0;
 
@@ -232,5 +236,83 @@
             showSlides(); // Wait until the document is fully loaded to start the slideshow
         });
     </script>
+
+    @*=============================== Footer ================================*@
+    <footer class="footer bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Materfamilia</h5>
+                    <p>Materfamilia is dedicated to supporting and empowering families through tailored services, education, and outreach programs.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="ContactUs" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Gallery" class="text-white text-decoration-none">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <div class="social-item">
+                            <a href="https://m.facebook.com/integrityqueen/" target="_blank" class="social-link">
+                                <lord-icon src="https://cdn.lordicon.com/dqxvvqzi.json"
+                                           trigger="hover"
+                                           colors="primary:#1b74e4,secondary:#f4f4f4"
+                                           style="width:50px;height:50px">
+                                </lord-icon>
+                                <p class="social-name">Facebook</p>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://x.com/IntegriteGRC" target="_blank" class="social-link">
+                                <lord-icon src="https://cdn.lordicon.com/bjdrneur.json"
+                                           trigger="hover"
+                                           style="width:50px;height:50px">
+                                </lord-icon>
+                                <p class="social-name">Twitter</p>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.instagram.com/integritegrc/?hl=en" target="_blank" class="social-link">
+                                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                                <lord-icon src="https://cdn.lordicon.com/ctlpkznr.json"
+                                           trigger="hover"
+                                           style="width:50px;height:50px">
+                                </lord-icon>
+                                <p class="social-name">Instagram</p>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://za.linkedin.com/in/annligman" target="_blank" class="social-link">
+                                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                                <lord-icon src="https://cdn.lordicon.com/nwqudhei.json"
+                                           trigger="hover"
+                                           style="width:50px;height:50px">
+                                </lord-icon>
+                                <p class="social-name">LinkedIn</p>
+                            </a>
+                         </div>
+                         <div class="social-item">
+                            <a href="https://whatsapp.com/channel/0029VajysNX0Qeabv9ChVk0G" target="_blank" class="social-link">
+                                <lord-icon src="https://cdn.lordicon.com/zpxybbhl.json"
+                                           trigger="hover"
+                                           colors="primary:#25d366,secondary:#f4f4f4"
+                                           style="width:50px;height:50px">
+                                </lord-icon>
+                                <p class="social-name">WhatsApp</p>
+                            </a>
+                         </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <p>&copy; 2024 Materfamilia. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </div>

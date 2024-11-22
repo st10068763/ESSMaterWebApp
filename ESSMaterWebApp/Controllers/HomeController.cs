@@ -38,6 +38,11 @@ namespace ESSMaterWebApp.Controllers
             return View();
         }
 
+        public IActionResult CommingSoon()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

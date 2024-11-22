@@ -278,9 +278,9 @@ a {
 /*----------------Navigation bar-------------------------*/
 /* Navigation Bar Styling */
 .navbar {
-    background: linear-gradient(90deg, #ff9f43, #ff6f61); /* Modern gradient */
+    background: linear-gradient(90deg, #ff9f43, #ff6f61); 
     border-bottom: 2px solid #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -317,17 +317,35 @@ a {
     transition: all 0.3s ease;
     border-radius: 4px;
 }
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ff7f50; /* Match navbar gradient */
+    border: none;
+    border-radius: 8px;
+}
 
-    .navbar-nav .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Hover background */
-        color: #ffe8d6;
-        text-decoration: none;
+.dropdown-item {
+    font-size: 0.9rem;
+    color: #1a1817;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+    .dropdown-item:hover {
+        background-color: #782c10; /* Orange hover effect */
+        color: white;
     }
 
-    .navbar-nav .nav-link.active {
-        color: #ffe8d6;
-        font-weight: bold;
-    }
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover background */
+    color: #1a1817;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link.active {
+    color: #1a1817;
+    font-weight: bold;
+}
 
 /* Navbar Toggler (Hamburger Icon) */
 .navbar-toggler {
@@ -341,30 +359,61 @@ a {
     font-size: 1.5rem;
 }
 
-/* Footer Styling */
-footer {
-    background: #1c1c1c; /* Dark background for footer */
+/*===================== Footer Styling =========================*/
+.footer {
+    background-color: #343a40;
     color: #ffffff;
+    font-size: 0.9rem;
+    padding: 20px 0;
     text-align: center;
-    padding: 30px 0; /* More padding for better spacing */
-    font-size: 1rem;
 }
 
-    footer a {
-        color: #ff9f43; /* Contrast color for links in footer */
-        text-decoration: none;
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Make the main content grow to fill available space */
+main {
+    flex: 1;
+}
+
+    .footer h5 {
+        font-size: 1.25rem;
         font-weight: bold;
     }
 
-        footer a:hover {
-            color: #ff6f61; /* Hover effect on footer links */
-            text-decoration: underline;
-        }
-
-    footer p {
-        margin: 0;
+    .footer a {
+        color: #ffcc00; /* Yellow links */
+        transition: color 0.3s ease;
     }
 
+        .footer a:hover {
+            color: #ff7f50; /* Orange hover effect */
+            text-decoration: none;
+        }
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+
+.footer .social-icons lord-icon {
+    cursor: pointer;
+}
+
+.footer .social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
 /* Button Styling */
 .navbar .btn {
     background-color: #ff6f61;
@@ -1111,18 +1160,6 @@ button.btn {
             margin-bottom: 10px;
         }
 
-/* Map Styling */
-.map-section {
-    margin-top: 40px;
-}
-
-#map {
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 /* Social Media Links */
 .social-media {
     margin-top: 40px;
@@ -1389,7 +1426,7 @@ button.btn {
     opacity: 0.9;
 }
 
-/*========================== Appointment create======================*/
+/*========================== Appointment create ======================*/
 /* General Page Styling */
 .page-title {
     font-size: 2rem;
@@ -1490,7 +1527,6 @@ input[type="submit"] {
         padding: 8px 15px;
     }
 }
-
 
 /*================================== Donation =====================================*/
 /* Style for the form container */
@@ -1740,4 +1776,215 @@ input[type="submit"] {
     }
 }
 
+/*======================= Social link =====================*/
+.social-media {
+    text-align: center;
+    margin-top: 40px;
+}
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+    .social-link:hover {
+        color: #007bff;
+    }
+
+lord-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover lord-icon {
+    transform: scale(1.2); /* Slight zoom-in effect on hover */
+}
+
+/*============================== Employee =======================*/
+/* Form Container */
+.employee-form {
+    background: linear-gradient(135deg, #ff7f50, #ffcc00); /* Gradient from orange to yellow */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.control-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White labels */
+}
+
+/* Input Fields */
+input.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff; /* White border */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff; /* White text */
+}
+
+    input.form-control:focus {
+        border-color: #ffcc00; /* Yellow when focused */
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Glowing effect */
+    }
+
+/* Validation Error Styling */
+.text-danger {
+    font-size: 0.875rem;
+    color: #ff6f61; /* Soft red for errors */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffcc00; /* Yellow button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #ff7f50; /* Orange on hover */
+        transform: scale(1.05);
+    }
+
+/* Go Back Button */
+.go-back-link .btn-secondary {
+    font-size: 1rem;
+    background-color: #ff6f61; /* Soft red */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+    .go-back-link .btn-secondary:hover {
+        background-color: #e05f57; /* Darker red on hover */
+        transform: scale(1.05);
+    }
+
+/* Page Title */
+.page-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .employee-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+/*========================= About page ========================*/
+/* General Styling */
+.about-page-section {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    background-color: #545151;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section, .mission-section, .vision-section, .founder-section, .values-section {
+    margin-bottom: 40px;
+}
+
+/* Founder Section */
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Aboutfounder-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.founder-content p {
+    flex: 1;
+}
+
+/* Values Section */
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .values-list li {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+        .values-list li::before {
+            content: '✔';
+            color: #ff7f50;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .founder-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Aboutfounder-image {
+        margin-bottom: 20px;
+    }
+}

@@ -60,9 +60,26 @@ namespace ESSMaterWebApp.Controllers
                 // Set SubmissionDate to current date and time
                 appointment.SubmissionDate = DateTime.Now;
 
-                _context.Add(appointment);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Create));
+                try
+                {
+                    _context.Add(appointment);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Create));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error saving appointment: {ex.Message}");
+                    ModelState.AddModelError("", "Unable to save the appointment. Please try again.");
+                }               
+            }
+            // Log validation errors if any
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                }
             }
             return View(appointment);
         }
