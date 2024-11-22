@@ -62,25 +62,9 @@ namespace ESSMaterWebApp.Controllers
 
                 try
                 {
-
-                    var debugAppointment = new Appointment
-                    {
-                        ServiceType = "Mentoring",
-                        FirstName = "John",
-                        Surname = "Doe",
-                        EmailAddress = "john.doe@example.com",
-                        PhoneNumber = "1234567890",
-                        Country = "South Africa",
-                        Province = "Western Cape",
-                        City = "Cape Town",
-                        Suburb = "Central",
-                        SubmissionDate = DateTime.Now,
-                        AppointmentDate = DateTime.Now.AddDays(1)
-                    };
-
                     _context.Add(appointment);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(Create));
                 }
                 catch (Exception ex)
                 {
