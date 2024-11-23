@@ -1988,3 +1988,21 @@ input[type="submit"] {
         margin-bottom: 20px;
     }
 }
+
+/*=================== slide ======================*/
+/* Slide */
+.slide {
+    display: none; /* Hide slides by default */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    /* Slide Image */
+    .slide img {
+        width: 100%; /* Scale image to fit the width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image fills the container */
+    }
